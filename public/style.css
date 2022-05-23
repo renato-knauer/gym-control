@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #7159c1;
+    --secondary-color: #f7df1e;
 }
 
 * {
@@ -67,7 +68,7 @@ header {
     background-color: white;
     margin: 45px auto;
     width: 800px;
-    height: 400px;
+    min-height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.4);
@@ -86,4 +87,53 @@ header {
 
 .card .avatar {
     background: url('https://source.unsplash.com/collection/3465564/500x500') no-repeat center center / cover; /* forward slash necessary to separate size from position values */
+}
+
+/*=== CARD DETAILS ===*/
+
+.card .details {
+    padding: 32px;
+}
+
+.card .details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.card .details .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+.card .details .item:last-child {
+    border: none;
+}
+
+.details h3,
+.card .details .item div:nth-child(1) {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.card .details .item div:nth-child(2) {
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card .details .item div:nth-child(2) span {
+    background-color: var(--secondary-color);
+    padding: 8px 16px;
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    display: inline-block; /* span is "display: inline", so it wouldn't accept de "margin-top" below */
+    margin-top: 8px;
+    /* font-weight: bold; it's carrying the inherited property from its modifier parent*/
+    text-transform: uppercase;
+    font-size: 12px;
 }
